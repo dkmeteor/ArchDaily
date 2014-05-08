@@ -1,0 +1,27 @@
+{
+  "name": "ArchDaily",
+  "version": "0.1.0",
+  "icons" : {
+      "48": "archdaily.png"
+  },
+  "description": "Transform Image",
+  "page_action": {
+      "default_title": "",
+      "default_icon": "archdaily.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.archdaily.com/*", "https://www.archdaily.com/*"],
+      "js":["foo.js"],
+      "run_at":"document_start"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "notifications",
+    "idle",
+    "http://*/",
+    "https://*/"
+  ],
+  "manifest_version":2
+}
